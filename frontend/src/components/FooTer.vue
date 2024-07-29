@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="footer bg-slate-400 p-10 justify-around text-white font-bold text-base"
+    class="footer bg-gray-600 p-8 justify-around text-white font-bold text-sm bottom-0"
   >
     <nav>
       <h6 class="footer-title">ອາຈານທີ່ປຶກສາ</h6>

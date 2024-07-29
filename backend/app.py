@@ -2,22 +2,22 @@ from flask import Flask, request, jsonify
 from laonlp import word_tokenize
 import re
 from keras.models import load_model
-from keras.utils import pad_sequences
+from keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import pickle
 
 app = Flask(__name__)
 
 # Load models and vocabularies
-enc_model = load_model('model/encoder_model.h5', compile=False)
-dec_model = load_model('model/decoder_model.h5', compile=False)
-inv_vocab = pickle.load(open("model/vocabulary.pkl", "rb"))
+enc_model = load_model('model/encoder_model.keras')
+dec_model = load_model('model/decoder_model.keras')
+inv_vocab = pickle.load(open("model/vocabulary2.pkl", "rb"))
 vocab = {w: v for v, w in inv_vocab.items()}
-keyword_list = pickle.load(open("model/keyword.pkl", "rb"))
-enc_in = pickle.load(open("model/question.pkl", "rb"))
+keyword_list = pickle.load(open("model/keyword2.pkl", "rb"))
+question = pickle.load(open("model/question2.pkl", "rb"))
 
 def decode_sequence(input_seq):
-    for sentence in enc_in:
+    for sentence in question:
         if np.array_equal(input_seq, [sentence]):
             states_value = enc_model.predict(input_seq)
 

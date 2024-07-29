@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      sans: ["Noto Sans Lao Looped", "sans-serif"]
+      sans: ["Noto Sans Lao", "sans-serif"]
     },
   },
   plugins: [require('daisyui'),],

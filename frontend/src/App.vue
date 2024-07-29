@@ -11,3 +11,6 @@ import ChatPage from './components/ChatPage.vue'
 import FooTerVue from './components/FooTer.vue';
 import HeadIntroVue from './components/HeadIntro.vue';
 </script>
+
+<style>
+</style>
