@@ -10,10 +10,12 @@
       <h6 class="footer-title">ຜູ້ຊ່ວຍທີ່ປຶກສາ</h6>
       <a class="link link-hover">ຊອ.ປທ. ບຸນມີ ພັນທະວົງ</a>
     </nav>
-    <nav>
+    <nav class=" flex flex-col">
       <h6 class="footer-title">ພັດທະນາໂດຍ</h6>
       <a class="link link-hover">ນ ອຸ້ມພາພອນ ສີພະຈັນ</a>
       <a class="link link-hover">ນ ມະນີຈັນ ສີບໍລິບານ</a>
     </nav>
+    <div class="footer-title mt-20">ຂໍ້ມູນສຶກສາ 2023-2024</div>
   </footer>
+  
 </template>

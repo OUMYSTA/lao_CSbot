@@ -49,10 +49,29 @@ def remove_special_character(text):
 def remove_spaces(text):
     return text.replace(" ", "")
 
+def clean_text(txt):
+    txt = re.sub(r"a", "A", txt)
+    txt = re.sub(r"b", "B", txt)
+    txt = re.sub(r"b+", "B+", txt)
+    txt = re.sub(r"c+", "C+", txt)
+    txt = re.sub(r"c", "C", txt)
+    txt = re.sub(r"d+", "D+", txt)
+    txt = re.sub(r"d", "D", txt)
+    txt = re.sub(r"f", "F", txt)
+    txt = re.sub(r"ai", "AI", txt)
+    txt = re.sub(r"ນານາ", "ນາໆ", txt)
+    txt = re.sub(r"ມື້", "ວັນ", txt)
+    txt = re.sub(r"ຄ່າເທີມ", "ຄ່າຮຽນ", txt)
+    txt = re.sub(r"ພາຍຫລັງ", "ພາຍຫຼັງ", txt)
+    txt = re.sub(r"ຫົວຫນ້າ", "ຫົວໜ້າ", txt)
+    txt = re.sub(r"ຫລັກສູດ", "ຫຼັກສູດ", txt)
+    return txt
+
 @app.route('/', methods=['POST'])
 def chat():
     input_text = request.json.get('input_text')
-    input_seq = remove_special_character(input_text)
+    input_seq = clean_text(input_text)
+    input_seq = remove_special_character(input_seq)
     input_seq = remove_spaces(input_seq)
     txt = []
     lst = []
