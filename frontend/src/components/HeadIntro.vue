@@ -21,9 +21,9 @@ import HowTo from './HowTo.vue'
         Computer Science
       </div>
     </div>
-    <button class="btn btn-circle bg-white mr-2" onclick="my_modal.showModal()">
+    <button class="btn btn-circle btn-ghost mr-2" onclick="my_modal.showModal()">
       <img
-        src="https://img.icons8.com/?size=100&id=7874&format=png&color=000000"
+        src="https://img.icons8.com/?size=100&id=98973&format=png&color=FFFFFF"
         alt="how to"
         width="22px"
         height="22px"
