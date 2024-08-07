@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 import { ref, nextTick } from 'vue'
-import jsonfile from './question.json'
+import jsonfile from '../assets/question.json'
 
 interface Message {
   text: string
