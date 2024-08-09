@@ -1,5 +1,5 @@
 <template>
-  <div id="chat" class="flex flex-col justify-end bg-gray-50 h-[25rem] mx-4 my-4 rounded-lg shadow-lg relative">
+  <div id="chat" class="flex flex-col justify-end bg-gray-50 h-[27rem] mx-4 my-4 rounded-lg shadow-lg relative">
     <div ref="chatContainer" class="carousel carousel-vertical overflow-y-auto">
       <div class="px-8" v-for="(msg, index) in messages" :key="index">
         <div :class="msg.isUser ? 'chat chat-end' : 'chat chat-start'" class="carousel-item">

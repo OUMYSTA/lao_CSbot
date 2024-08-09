@@ -15,7 +15,6 @@
       <a class="link link-hover">ນ ອຸ້ມພາພອນ ສີພະຈັນ</a>
       <a class="link link-hover">ນ ມະນີຈັນ ສີບໍລິບານ</a>
     </nav>
-    <div class="footer-title mt-20">ຂໍ້ມູນສຶກສາ 2023-2024</div>
   </footer>
   
 </template>

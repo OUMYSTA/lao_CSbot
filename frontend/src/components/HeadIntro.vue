@@ -1,5 +1,15 @@
 <script setup lang="ts">
-import HowTo from './HowTo.vue'
+import { ref, onMounted } from 'vue';
+import HowTo from './HowTo.vue';
+
+const hintText = ref('ຄຳແນະນຳສຳລັບການໃຊ້ງານ');
+
+// Remove hint text after 3 seconds
+onMounted(() => {
+  setTimeout(() => {
+    hintText.value = '';
+  }, 3000);
+});
 </script>
 
 <template>
@@ -28,31 +38,21 @@ import HowTo from './HowTo.vue'
         width="22px"
         height="22px"
       />
+      <span v-if="hintText" class="absolute mt-18 mr-24 w-32 bg-white text-xs px-2 py-1 rounded">
+        {{ hintText }}
+      </span>
     </button>
-    <dialog id="my_modal" class="modal bg-white w-[52rem] h-[42rem] rounded-xl">
-      <div class="modal_box">
-        <HowTo />
-      </div>
-      <div class="modal-action">
-        <form method="dialog">
-          <button class="btn btn-warning my-5">ປິດ</button>
-        </form>
-      </div>
-    </dialog>
-    <!-- <div class="dropdown dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle mr-2 bg-white">
-        <div class="rounded-full">
-          <img
-            src="https://img.icons8.com/?size=100&id=7874&format=png&color=000000"
-            alt="how to"
-            width="22px"
-            height="22px"
-          />
+    <dialog id="my_modal" class="modal">
+      <div class=" bg-white w-[52rem] h-[35rem] rounded-xl">
+        <div class="modal_box pt-5">
+          <HowTo />
+        </div>
+        <div class="modal-action flex justify-center">
+          <form method="dialog">
+            <button class="btn btn-warning">ປິດ</button>
+          </form>
         </div>
       </div>
-      <ul tabindex="0" class="menu menu-sm dropdown-content rounded-md z-[1] bg-white mt-3 w-96 p-2 shadow">
-        <HowTo/>
-      </ul>
-    </div> -->
+    </dialog>
   </div>
 </template>
