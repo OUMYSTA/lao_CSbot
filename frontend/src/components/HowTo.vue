@@ -93,19 +93,19 @@ const howto = ref<HowtoList[]>([
       <ul class="text-left">
         <li>
           <h3 class="text-lg font-medium pb-2 pt-5">1. ປ້ອນຄຳຖາມ</h3>
-          <img src="../assets/input.png" alt="" class="" />
+          <img src="../assets/input.png"/>
         </li>
         <li>
           <h3 class="text-lg font-medium pb-2 pt-5">2. ເລືອກຄຳຖາມທີ່ແນະນຳຂຶ້ນມາ</h3>
-          <img src="../assets/select.png" alt="" class="w-[42rem]" />
+          <img src="../assets/select.png"/>
         </li>
         <li>
           <h3 class="text-lg font-medium pb-2 pt-5">3. ລໍຖ້າລະບົບປະມວນຜົນ</h3>
-          <img src="../assets/process.png" alt="" class="w-[42rem]" />
+          <img src="../assets/process.png"/>
         </li>
         <li>
           <h3 class="text-lg font-medium pb-2 pt-5">4. ຄຳຕອບທີ່ໄດ້ຈາກການປະມວນຜົນ</h3>
-          <img src="../assets/output.jpeg" alt="" class="w-[42rem]" />
+          <img src="../assets/output.jpeg"/>
         </li>
         <!-- <li v-for="(how, idx) in howto" :key="idx">
           <h3 class="text-lg font-medium pb-1 pt-3">
